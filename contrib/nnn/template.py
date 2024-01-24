@@ -1,6 +1,6 @@
 pkgname = "nnn"
 pkgver = "4.9"
-pkgrel = 0
+pkgrel = 1
 build_style = "makefile"
 make_cmd = "gmake"
 hostmakedepends = ["pkgconf", "gmake"]
@@ -23,4 +23,14 @@ def post_install(self):
     )
     self.install_completion("misc/auto-completion/fish/nnn.fish", "fish")
     self.install_completion("misc/auto-completion/zsh/_nnn", "zsh")
+
+    self.install_dir("usr/share/nnn")
+    self.rm("plugins/README.md")
+    self.install_files("plugins", "usr/share/nnn")
+
     self.install_license("LICENSE")
+
+
+@subpackage("nnn-plugins")
+def _plugs(self):
+    return ["usr/share/nnn/plugins"]
