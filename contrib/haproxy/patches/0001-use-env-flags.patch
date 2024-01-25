@@ -1,0 +1,49 @@
+From 34934b460561a333527ffc6be37700ca1e4c5e75 Mon Sep 17 00:00:00 2001
+From: ttyyls <contact@behri.org>
+Date: Fri, 15 Mar 2024 19:47:23 +0000
+Subject: [PATCH] use env flags
+
+---
+ Makefile | 10 +++++-----
+ 1 file changed, 5 insertions(+), 5 deletions(-)
+
+diff --git a/Makefile b/Makefile
+index efdd10297..b1f599a4e 100644
+--- a/Makefile
++++ b/Makefile
+@@ -167,8 +167,8 @@ CPU = generic
+ ARCH =
+ 
+ #### Toolchain options.
+-CC = cc
+-LD = $(CC)
++cmd_CC = cc
++cmd_LD = cc
+ 
+ #### Debug flags (typically "-g").
+ # Those flags only feed CFLAGS so it is not mandatory to use this form.
+@@ -850,10 +850,10 @@ endif
+ $(collect_opts_flags)
+ 
+ #### Global compile options
+-VERBOSE_CFLAGS = $(CFLAGS) $(TARGET_CFLAGS) $(SMALL_OPTS) $(DEFINE)
++VERBOSE_CFLAGS := $(CFLAGS) $(TARGET_CFLAGS) $(SMALL_OPTS) $(DEFINE)
+ COPTS  = -Iinclude
+ 
+-COPTS += $(CFLAGS) $(TARGET_CFLAGS) $(SMALL_OPTS) $(DEFINE) $(SILENT_DEFINE)
++COPTS += $(VERBOSE_CFLAGS) $(TARGET_CFLAGS) $(SMALL_OPTS) $(DEFINE) $(SILENT_DEFINE)
+ COPTS += $(DEBUG) $(OPTIONS_CFLAGS) $(ADDINC)
+ 
+ ifneq ($(VERSION)$(SUBVERS)$(EXTRAVERSION),)
+@@ -873,7 +873,7 @@ endif
+ #### Global link options
+ # These options are added at the end of the "ld" command line. Use LDFLAGS to
+ # add options at the beginning of the "ld" command line if needed.
+-LDOPTS = $(TARGET_LDFLAGS) $(OPTIONS_LDFLAGS) $(ADDLIB)
++LDOPTS := $(TARGET_LDFLAGS) $(OPTIONS_LDFLAGS) $(ADDLIB) $(CFLAGS)
+ 
+ ifeq ($(TARGET),)
+ all:
+-- 
+2.44.0
+
