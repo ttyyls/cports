@@ -1,0 +1,42 @@
+From 7bcf60bcfca42df9d527af61429f1b9c751bc269 Mon Sep 17 00:00:00 2001
+From: ttyyls <contact@behri.org>
+Date: Sat, 24 Feb 2024 19:14:59 +0100
+Subject: [PATCH 2/2] fix header file path definition
+
+---
+ test/print_safe_buffer.c | 4 ++--
+ test/print_safe_buffer.h | 4 ++--
+ 2 files changed, 4 insertions(+), 4 deletions(-)
+
+diff --git a/test/print_safe_buffer.c b/test/print_safe_buffer.c
+index 55988c8..b0e4cce 100644
+--- a/test/print_safe_buffer.c
++++ b/test/print_safe_buffer.c
+@@ -1,7 +1,7 @@
+ 
+ #include "print_safe_buffer.h"
+-#include "../config.h"
+-#include "../radvd.h"
++#include "config.h"
++#include "radvd.h"
+ 
+ #include <stdio.h>
+ 
+diff --git a/test/print_safe_buffer.h b/test/print_safe_buffer.h
+index 7ae633b..320a88f 100644
+--- a/test/print_safe_buffer.h
++++ b/test/print_safe_buffer.h
+@@ -1,8 +1,8 @@
+ 
+ #pragma once
+ 
+-#include "../config.h"
+-#include "../radvd.h"
++#include "config.h"
++#include "radvd.h"
+ 
+ size_t snprint_safe_buffer(char *s, size_t size, struct safe_buffer const *sb);
+ void print_safe_buffer(struct safe_buffer const *sb);
+-- 
+2.43.2
+

@@ -1,0 +1,9 @@
+# radvd system service
+
+type            = process
+command         = /usr/bin/radvd --nodaemon
+before          = network.target
+depends-on      = pre-network.target
+logfile         = /var/log/radvd.log
+restart         = true
+smooth-recovery = true

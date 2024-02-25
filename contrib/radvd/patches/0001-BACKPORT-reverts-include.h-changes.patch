@@ -1,0 +1,30 @@
+From 18b5b2360793d6fc74615c20286ef228f702aba9 Mon Sep 17 00:00:00 2001
+From: ttyyls <contact@behri.org>
+Date: Sat, 24 Feb 2024 18:02:23 +0100
+Subject: [PATCH 1/2] [BACKPORT] reverts include.h changes
+
+see: https://github.com/radvd-project/radvd/commit/06689f8c06f44c7e87f7ff1d814428f88375b53f
+---
+ includes.h | 5 -----
+ 1 file changed, 5 deletions(-)
+
+diff --git a/includes.h b/includes.h
+index ef30b10..c528c86 100644
+--- a/includes.h
++++ b/includes.h
+@@ -76,12 +76,7 @@
+ #include <sys/sysctl.h>
+ #endif
+ 
+-#if !defined(__GLIBC__) && defined(linux)
+-#include <linux/if.h>
+-#define IF_NAMESIZE IFNAMSIZ
+-#else
+ #include <net/if.h>
+-#endif
+ 
+ #ifdef HAVE_NET_IF_DL_H
+ #include <net/if_dl.h>
+-- 
+2.43.2
+
