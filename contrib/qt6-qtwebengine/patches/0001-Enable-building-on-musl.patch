@@ -1,8 +1,8 @@
 diff --git a/configure.cmake b/configure.cmake
-index 172831c6..76813841 100644
+index a9f659533..19267a726 100644
 --- a/configure.cmake
 +++ b/configure.cmake
-@@ -403,11 +403,6 @@ add_check_for_support(
+@@ -529,11 +529,6 @@ add_check_for_support(
     CONDITION NOT LINUX OR PkgConfig_FOUND
     MESSAGE "A pkg-config support is required."
  )
