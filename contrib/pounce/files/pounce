@@ -1,0 +1,7 @@
+# pounce service
+
+type            = process
+command         = /usr/bin/pounce
+depends-on      = network.target
+restart         = true
+smooth-recovery = true

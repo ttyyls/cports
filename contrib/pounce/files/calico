@@ -1,0 +1,7 @@
+# calico service
+
+type            = process
+command         = /usr/bin/calico
+depends-on      = network.target
+restart         = true
+smooth-recovery = true
