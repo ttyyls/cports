@@ -1,0 +1,29 @@
+From cf2c04b3816875b84bde0d95d43cf4a051b1b811 Mon Sep 17 00:00:00 2001
+From: ttyyls <contact@behri.org>
+Date: Fri, 19 Apr 2024 01:09:02 +0100
+Subject: [PATCH 1/2] use system libs
+
+---
+ CMakeLists.txt | 6 +++---
+ 1 file changed, 3 insertions(+), 3 deletions(-)
+
+diff --git a/CMakeLists.txt b/CMakeLists.txt
+index ab9affa5..d58d9a12 100644
+--- a/CMakeLists.txt
++++ b/CMakeLists.txt
+@@ -24,9 +24,9 @@ set(CMAKE_CXX_STANDARD_REQUIRED ON)
+ 
+ # We require LLVM, Google Test and Google Benchmark
+ if(NOT PONY_CROSS_LIBPONYRT)
+-    find_package(LLVM REQUIRED CONFIG PATHS "build/libs/lib/cmake/llvm" "build/libs/lib64/cmake/llvm" NO_DEFAULT_PATH)
+-    find_package(GTest REQUIRED CONFIG PATHS "build/libs/lib/cmake/GTest" "build/libs/lib64/cmake/GTest" NO_DEFAULT_PATH)
+-    find_package(benchmark REQUIRED CONFIG PATHS "build/libs/lib/cmake/benchmark" "build/libs/lib64/cmake/benchmark" NO_DEFAULT_PATH)
++    find_package(LLVM)
++    find_package(GTest)
++    find_package(benchmark)
+ endif()
+ 
+ # Uses
+-- 
+2.44.0
+

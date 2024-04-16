@@ -1,0 +1,38 @@
+From 132cd1b61a399ac233a20efd929ffe13117e856c Mon Sep 17 00:00:00 2001
+From: ttyyls <contact@behri.org>
+Date: Fri, 19 Apr 2024 01:13:15 +0100
+Subject: [PATCH 2/2] unified llvm18 fixes
+
+---
+ src/libponyc/codegen/codegen.c | 1 -
+ src/libponyc/codegen/codegen.h | 2 +-
+ 2 files changed, 1 insertion(+), 2 deletions(-)
+
+diff --git a/src/libponyc/codegen/codegen.c b/src/libponyc/codegen/codegen.c
+index a4536e70..4ffd499b 100644
+--- a/src/libponyc/codegen/codegen.c
++++ b/src/libponyc/codegen/codegen.c
+@@ -17,7 +17,6 @@
+ 
+ #include <platform.h>
+ #include <llvm-c/DebugInfo.h>
+-#include <llvm-c/Initialization.h>
+ #include <llvm-c/Linker.h>
+ #include <llvm-c/Support.h>
+ #include <string.h>
+diff --git a/src/libponyc/codegen/codegen.h b/src/libponyc/codegen/codegen.h
+index 822ea398..2891462b 100644
+--- a/src/libponyc/codegen/codegen.h
++++ b/src/libponyc/codegen/codegen.h
+@@ -5,7 +5,7 @@
+ #include <llvm-c/Core.h>
+ #include <llvm-c/Target.h>
+ #include <llvm-c/TargetMachine.h>
+-#include <llvm-c/Transforms/PassManagerBuilder.h>
++#include <llvm-c/Transforms/PassBuilder.h>
+ #include <llvm-c/Analysis.h>
+ #include <stdio.h>
+ 
+-- 
+2.44.0
+
