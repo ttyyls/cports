@@ -1,7 +1,7 @@
 pkgname = "qt6-qtwebengine"
 pkgver = "6.7.0"
 pkgrel = 0
-archs = ["aarch64", "x86_64"]
+archs = ["aarch64", "ppc64le", "x86_64"]
 build_style = "cmake"
 configure_args = [
     "-DINSTALL_ARCHDATADIR=lib/qt6",
@@ -92,8 +92,6 @@ tool_flags = {
         "-Wno-unknown-warning-option",
         "-Wno-builtin-macro-redefined",
         "-Wno-deprecated-declarations",
-        "-Wno-c++11-narrowing-const-reference",
-        "-Wno-thread-safety-reference-return",
     ],
 }
 hardening = ["!int", "!scp"]
