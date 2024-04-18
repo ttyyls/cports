@@ -6,9 +6,6 @@ build_style = "cmake"
 configure_args = [
     f"-DPONYC_VERSION={pkgver}",
     "-DPONY_USE_LTO=ON",
-    "-DPONY_USE_THREAD_SANITIZER=ON",
-    "-DPONY_USE_ADDRESS_SANITIZER=ON",
-    "-DPONY_USE_UNDEFINED_BEHAVIOR_SANITIZER=ON",
 ]
 hostmakedepends = ["cmake", "clang-tools-extra", "ninja"]
 makedepends = [
