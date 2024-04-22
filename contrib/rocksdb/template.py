@@ -1,0 +1,11 @@
+pkgname = "rocksdb"
+pkgver = "9.1.0"
+pkgrel = 0
+build_style = "cmake"
+hostmakedepends = ["cmake", "ninja"]
+pkgdesc = "Persistent key value store"
+maintainer = "ttyyls <contact@behri.org>"
+license = "Apache-2.0 OR GPL-2.0-only"
+url = "https://rocksdb.org"
+source = f"https://github.com/facebook/rocksdb/archive/v{pkgver}.tar.gz"
+sha256 = "3c225e45bf6f6367cf5a4413f71abc4a3427627790e6d58c57adc2daa4b6309d"
