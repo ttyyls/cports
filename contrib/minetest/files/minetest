@@ -1,0 +1,10 @@
+# minetest server service
+
+type        = bgprocess
+command     = /usr/bin/minetestserver --config /etc/minetest/minetest.conf
+logfile     = /var/log/minetest.log
+pid-file    = /run/minetest.pid
+depends-on  = network.target
+depends-on  = local.target
+run-as      = _minetest
+working-dir = /var/lib/minetest
