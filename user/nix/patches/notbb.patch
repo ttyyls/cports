@@ -1,0 +1,23 @@
+skip check for busybox multicall which always fails if sandbox-shell != busybox
+diff --git a/configure.ac b/configure.ac
+index 90a6d45d5..8e89d0ad5 100644
+--- a/configure.ac
++++ b/configure.ac
+@@ -417,17 +417,6 @@ AC_CHECK_FUNCS([strsignal posix_fallocate sysconf])
+ AC_ARG_WITH(sandbox-shell, AS_HELP_STRING([--with-sandbox-shell=PATH],[path of a statically-linked shell to use as /bin/sh in sandboxes]),
+   sandbox_shell=$withval)
+ AC_SUBST(sandbox_shell)
+-if test ${cross_compiling:-no} = no && ! test -z ${sandbox_shell+x}; then
+-  AC_MSG_CHECKING([whether sandbox-shell has the standalone feature])
+-  # busybox shell sometimes allows executing other busybox applets,
+-  # even if they are not in the path, breaking our sandbox
+-  if PATH= $sandbox_shell -c "busybox" 2>&1 | grep -qv "not found"; then
+-    AC_MSG_RESULT(enabled)
+-    AC_MSG_ERROR([Please disable busybox FEATURE_SH_STANDALONE])
+-  else
+-    AC_MSG_RESULT(disabled)
+-  fi
+-fi
+ 
+ AC_ARG_ENABLE(embedded-sandbox-shell, AS_HELP_STRING([--enable-embedded-sandbox-shell],[include the sandbox shell in the Nix binary [default=no]]),
+   embedded_sandbox_shell=$enableval, embedded_sandbox_shell=no)

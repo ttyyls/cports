@@ -1,0 +1,5 @@
+# nix daemon system service
+
+type = process
+command = /usr/bin/nix-daemon
+log-file = /var/log/nix-daemon
