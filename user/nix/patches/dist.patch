@@ -1,0 +1,13 @@
+diff --git a/Makefile b/Makefile
+index ea0754fa5..3d0a21fda 100644
+--- a/Makefile
++++ b/Makefile
+@@ -81,7 +81,7 @@ endif
+ OPTIMIZE = 1
+ 
+ ifeq ($(OPTIMIZE), 1)
+-  GLOBAL_CXXFLAGS += -O3 $(CXXLTO)
++  GLOBAL_CXXFLAGS += $(CXXLTO)
+   GLOBAL_LDFLAGS += $(CXXLTO)
+ else
+   GLOBAL_CXXFLAGS += -O0 -U_FORTIFY_SOURCE
