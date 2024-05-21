@@ -1,0 +1,13 @@
+diff --git a/doc/manual/local.mk b/doc/manual/local.mk
+index 71ad5c8e6..14be4feac 100644
+--- a/doc/manual/local.mk
++++ b/doc/manual/local.mk
+@@ -225,7 +225,7 @@ $(docdir)/manual/index.html: $(MANUAL_SRCS) $(d)/book.toml $(d)/anchors.jq $(d)/
+ 			$(call process-includes,$$file,$$file); \
+ 		done; \
+ 		find "$$tmp" -name '*.md' ! -name 'documentation.md' | while read -r file; do \
+-			docroot="$$(realpath --relative-to="$$(dirname "$$file")" $$tmp/manual/src)"; \
++			docroot="$$(realpath "$$(dirname "$$file")" $$tmp/manual/src)"; \
+ 			sed -i "s,@docroot@,$$docroot,g" "$$file"; \
+ 		done; \
+ 		set -euo pipefail; \
