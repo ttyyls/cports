@@ -1,0 +1,14 @@
+pkgname = "sapling"
+pkgver = "0.2.20240718"
+_ref = "145624+f4e9df48"
+pkgrel = 0
+build_wrksrc = "eden/scm"
+build_style = "cargo"
+hostmakedepends = ["cargo-auditable"]
+makedepends = ["rust-std", "zstd-devel"]
+pkgdesc = "Scalable and user friendly vcs"
+maintainer = "ttyyls <contact@behri.org>"
+license = "GPL-2.0-only"
+url = "https://sapling-scm.com"
+source = f"https://github.com/facebook/sapling/archive/refs/tags/{pkgver}-{_ref}.tar.gz"
+sha256 = "8081d405cddb9dc4eadd96f4c948b7686b0b61f641c068fc87b9c27518fb619e"
