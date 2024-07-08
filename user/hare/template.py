@@ -1,6 +1,6 @@
 pkgname = "hare"
 pkgver = "0.24.2"
-pkgrel = 0
+pkgrel = 1
 archs = ["aarch64", "riscv64", "x86_64"]
 build_style = "makefile"
 make_env = {"VERSION": pkgver, "LOCALVER": "chimera"}
@@ -10,7 +10,14 @@ make_build_args = [
     f"{self.profile().arch.upper()}_LD=ld",
 ]
 hostmakedepends = [f"binutils-{self.profile().arch}", "harec", "qbe", "scdoc"]
-depends = ["binutils", "clang", "harec", "qbe", "tzdata"]
+depends = [
+    "binutils",
+    "clang",
+    "harec",
+    f"hare-std={pkgver}-r{pkgrel}",
+    "qbe",
+    "tzdata",
+]
 checkdepends = ["tzdata"]
 pkgdesc = "Hare programming language"
 maintainer = "triallax <triallax@tutanota.com>"
@@ -44,3 +51,9 @@ else:
 
 def pre_build(self):
     self.cp(self.files_path / "config.mk", "config.mk")
+
+
+@subpackage("hare-std")
+def _std(self):
+    self.pkgdesc = f"{pkgdesc} (standard library)"
+    return ["usr/src/hare/stdlib"]
