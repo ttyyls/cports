@@ -1,7 +1,7 @@
 pkgname = "postgresql16"
 _major = pkgname.removeprefix("postgresql")
 pkgver = f"{_major}.4"
-pkgrel = 0
+pkgrel = 1
 # NOTE: version 16 doesn't work with meson + tarball
 # switch to meson for version 17
 build_style = "gnu_configure"
@@ -243,14 +243,14 @@ def _(self):
         ).iterdir():
             self.make_link(
                 f"usr/share/man/man1/{f.name}",
-                f"../../{pkgname}/man/man1/{f.name}",
+                f"../../../{pkgname}/man/man1/{f.name}",
             )
         for f in (
             self.parent.destdir / f"usr/share/{pkgname}/man/man7"
         ).iterdir():
             self.make_link(
                 f"usr/share/man/man7/{f.name}",
-                f"../../{pkgname}/man/man7/{f.name}",
+                f"../../../{pkgname}/man/man7/{f.name}",
             )
         # service
         self.make_link("etc/dinit.d/postgresql", pkgname)
