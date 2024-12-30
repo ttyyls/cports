@@ -1,0 +1,41 @@
+diff --git a/khard/carddav_object.py b/khard/carddav_object.py
+index a255d9d..abbf9cf 100644
+--- a/khard/carddav_object.py
++++ b/khard/carddav_object.py
+@@ -18,7 +18,6 @@ import time
+ from typing import Any, Callable, Dict, List, Literal, Optional, Tuple, \
+     TypeVar, Union, Sequence, overload
+ 
+-from atomicwrites import atomic_write
+ from ruamel import yaml
+ from ruamel.yaml import YAML
+ import vobject
+@@ -1514,7 +1513,7 @@ class CarddavObject(YAMLEditable):
+         if not self.uid:
+             self.uid = helpers.get_random_uid()
+         try:
+-            with atomic_write(self.filename, overwrite=overwrite) as f:
++            with open(self.filename, "w") as f:
+                 f.write(self.vcard.serialize())
+         except vobject.base.ValidateError as err:
+             print("Error: Vcard is not valid.\n{}".format(err))
+diff --git a/pyproject.toml b/pyproject.toml
+index 3c6aaac..2d1e6c8 100644
+--- a/pyproject.toml
++++ b/pyproject.toml
+@@ -23,7 +23,6 @@ keywords = ["vcard", "console", "addressbook"]
+ license = {text = "GPL"}
+ 
+ dependencies = [
+-    "atomicwrites",
+     "configobj",
+     "ruamel.yaml",
+     "unidecode",
+@@ -61,7 +60,6 @@ warn_redundant_casts = true
+ [[tool.mypy.overrides]]
+ # These do not provide type anotations or stub files
+ module = [
+-    "atomicwrites",
+     "configobj",
+     "configobj.validate",
+     "validate",
