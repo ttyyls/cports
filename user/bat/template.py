@@ -1,6 +1,6 @@
 pkgname = "bat"
 pkgver = "0.25.0"
-pkgrel = 0
+pkgrel = 1
 build_style = "cargo"
 hostmakedepends = ["cargo-auditable", "pkgconf"]
 makedepends = [
