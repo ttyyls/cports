@@ -1,6 +1,6 @@
 pkgname = "static-web-server"
 pkgver = "2.34.0"
-pkgrel = 0
+pkgrel = 1
 build_style = "cargo"
 # We patch Cargo.toml and Cargo.lock
 prepare_after_patch = True
