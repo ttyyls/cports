@@ -1,6 +1,6 @@
 pkgname = "git-absorb"
 pkgver = "0.6.16"
-pkgrel = 0
+pkgrel = 1
 build_style = "cargo"
 hostmakedepends = ["asciidoc", "cargo-auditable", "pkgconf"]
 makedepends = ["libgit2-devel", "rust-std"]
