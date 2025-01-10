@@ -1,6 +1,6 @@
 pkgname = "tmux-sessionizer"
 pkgver = "0.4.4"
-pkgrel = 0
+pkgrel = 1
 build_style = "cargo"
 hostmakedepends = ["cargo-auditable", "pkgconf"]
 makedepends = ["rust-std", "openssl-devel", "libgit2-devel"]
