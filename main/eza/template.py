@@ -1,6 +1,6 @@
 pkgname = "eza"
 pkgver = "0.20.15"
-pkgrel = 0
+pkgrel = 1
 build_style = "cargo"
 hostmakedepends = ["cargo-auditable", "pkgconf"]
 makedepends = [
