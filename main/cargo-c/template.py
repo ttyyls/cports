@@ -1,6 +1,6 @@
 pkgname = "cargo-c"
 pkgver = "0.10.7"
-pkgrel = 0
+pkgrel = 1
 build_style = "cargo"
 # no tests in others
 make_check_args = ["--lib"]
