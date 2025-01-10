@@ -1,6 +1,6 @@
 pkgname = "git-cliff"
 pkgver = "2.7.0"
-pkgrel = 0
+pkgrel = 1
 build_style = "cargo"
 make_check_args = [
     "--",
