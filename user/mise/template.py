@@ -1,5 +1,5 @@
 pkgname = "mise"
-pkgver = "2025.1.9"
+pkgver = "2025.1.15"
 pkgrel = 0
 build_style = "cargo"
 prepare_after_patch = True
@@ -17,7 +17,6 @@ hostmakedepends = [
     "pkgconf",
 ]
 makedepends = [
-    "libgit2-devel",
     "lua5.1-devel",
     "openssl-devel",
     "rust-std",
@@ -29,7 +28,7 @@ maintainer = "ttyyls <contact@behri.org>"
 license = "MIT"
 url = "https://mise.jdx.dev"
 source = f"https://github.com/jdx/mise/archive/refs/tags/v{pkgver}.tar.gz"
-sha256 = "e44369529d2a786361dd1fa136fea130216768f709cb623447e68f1b19637e13"
+sha256 = "d3f2db473b9639e77f63e1dca462b7ca8b5a3fee8083ce7f196c1463745fc69d"
 
 
 def install(self):
