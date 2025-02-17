@@ -1,0 +1,11 @@
+pkgname = "mustach"
+pkgver = "1.2.0"
+pkgrel = 0
+build_style = "meson"
+hostmakedepends = ["meson"]
+pkgdesc = "C implementation of mustache templating language"
+maintainer = "ttyyls <contact@behri.org>"
+license = "0BSD"
+url = "https://gitlab.com/jobol/mustach"
+source = f"{url}/-/archive/{pkgver}.tar.gz"
+sha256 = "2d80ce8c51c9362bb015af8a9ec02946015598c5060548849141f9f0ce18cc2b"
