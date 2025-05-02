@@ -1,0 +1,6 @@
+type = process
+command = /usr/lib/memached/memcached
+depends-on = network.target
+smooth-recovery = true
+logfile = /var/log/memcached.log
+run-as = _memcached
