@@ -1,6 +1,7 @@
 type = process
 command = /usr/bin/forgejo web
 logfile = /var/log/forgejo.log
+working-dir = /var/lib/forgejo
 smooth-recovery = true
 run-as = _forgejo
 depends-on: local.target
