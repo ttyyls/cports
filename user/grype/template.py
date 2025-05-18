@@ -1,0 +1,12 @@
+pkgname = "grype"
+pkgver = "0.92.1"
+pkgrel = 0
+build_style = "go"
+make_build_args = ["./cmd/grype"]
+hostmakedepends = ["go"]
+checkdepends = ["bash"]
+pkgdesc = "Vulnerability scanner for container images and filesystems"
+license = "Apache-2.0"
+url = "https://github.com/anchore/grype"
+source = f"https://github.com/anchore/grype/archive/refs/tags/v{pkgver}.tar.gz"
+sha256 = "c6ac75f6ab6774fbc52934c5ecf39db24c8cd3c3fecb546db4f2bf0f2def27ef"
