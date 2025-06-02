@@ -1,0 +1,14 @@
+diff --git a/generate/unix/Makefile.config b/generate/unix/Makefile.config
+index ae80ccf2e..ef8ebfb78 100644
+--- a/generate/unix/Makefile.config
++++ b/generate/unix/Makefile.config
+@@ -251,9 +251,6 @@ ifneq ($(ACPI_HOST), _FreeBSD)
+     ifneq ($(ACPI_HOST), _APPLE)
+         CWARNINGFLAGS += \
+             -Woverride-init\
+-            -Wlogical-op\
+-            -Wmissing-parameter-type\
+-            -Wold-style-declaration\
+             -Wtype-limits
+     endif
+ endif
