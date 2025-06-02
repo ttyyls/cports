@@ -1,0 +1,10 @@
+pkgname = "virter"
+pkgver = "0.28.1"
+pkgrel = 0
+build_style = "go"
+hostmakedepends = ["go"]
+pkgdesc = "Command line tool for creation and cloning of libvirt vms"
+license = "Apache-2.0"
+url = "https://github.com/LINBIT/virter"
+source = f"{url}/archive/refs/tags/v{pkgver}.tar.gz"
+sha256 = "2aa174550c392acab482a1176af71bf823ed3506feccdca787f7548d982a181a"
