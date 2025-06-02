@@ -1,0 +1,9 @@
+pkgname = "crystal"
+pkgver = "1.15.1"
+pkgrel = 0
+build_style = "makefile"
+pkgdesc = "Crystal Programming Language"
+license = "Apache-2.0"
+url = "https://github.com/crystal-lang/crystal"
+source = f"{url}/archive/refs/tags/{pkgver}.tar.gz"
+sha256 = "72b32f2da09059ca96331be124cf611d3c6bd6da80f52cd551df59bfe14e6ebd"
