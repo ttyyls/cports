@@ -2,9 +2,16 @@ pkgname = "thinkfan"
 pkgver = "2.0.0"
 pkgrel = 0
 build_style = "cmake"
-configure_args = ["-DCMAKE_POLICY_VERSION_MINIMUM=3.5"]
+configure_args = [
+    "-DCMAKE_POLICY_VERSION_MINIMUM=3.5",
+    "-DUSE_ATASMART=ON",
+]
 hostmakedepends = ["cmake", "ninja", "pkgconf"]
-makedepends = ["yaml-cpp-devel"]
+makedepends = [
+    "libatasmart-devel",
+    "lm-sensors-devel",
+    "yaml-cpp-devel",
+]
 pkgdesc = "Simple fan control program"
 license = "GPL-3.0-or-later"
 url = "https://github.com/vmatare/thinkfan"
