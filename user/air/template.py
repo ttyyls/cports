@@ -1,0 +1,10 @@
+pkgname = "air"
+pkgver = "1.62.0"
+pkgrel = 0
+build_style = "go"
+hostmakedepends = ["go"]
+pkgdesc = "Live reload for go apps"
+license = "GPL-3.0-or-later"
+url = "https://github.com/air-verse/air"
+source = f"{url}/archive/refs/tags/v{pkgver}.tar.gz"
+sha256 = "01196d10cd95be17a9ce2c6181a3ec254d0fa28649877dfcefdba0ea4bbbef3e"
