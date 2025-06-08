@@ -1,0 +1,13 @@
+diff --git a/Makefile b/Makefile
+index 0599117..81bb5de 100644
+--- a/Makefile
++++ b/Makefile
+@@ -51,7 +51,7 @@ himitsu.7: docs/himitsu.7.scd
+ clean:
+ 	rm -f himitsud himitsu-store hiq hiprompt-tty $(DOCS)
+ 
+-install: $(CMDS) $(DOCS)
++install:
+ 	mkdir -p $(DESTDIR)$(PREFIX)/bin
+ 	mkdir -p $(DESTDIR)$(THIRDPARTYDIR)/himitsu/client
+ 	mkdir -p $(DESTDIR)$(THIRDPARTYDIR)/himitsu/query
