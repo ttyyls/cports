@@ -1,0 +1,4 @@
+type = process
+command = /usr/bin/pimsync daemon -r 3
+log-type = buffer
+ready-notification = pipefd:3
