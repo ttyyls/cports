@@ -1,0 +1,15 @@
+diff --git a/pyproject.toml b/pyproject.toml
+index d367c43..fcea783 100644
+--- a/pyproject.toml
++++ b/pyproject.toml
+@@ -76,10 +76,6 @@ required-imports = ["from __future__ import annotations"]
+ [tool.pytest.ini_options]
+ addopts = """
+ --tb=short
+---cov-config .coveragerc
+---cov=vdirsyncer
+---cov-report=term-missing:skip-covered
+---no-cov-on-fail
+ --color=yes
+ """
+ # filterwarnings=error
