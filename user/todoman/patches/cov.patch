@@ -1,0 +1,13 @@
+diff --git a/pyproject.toml b/pyproject.toml
+index ce2cfb4..30dc605 100644
+--- a/pyproject.toml
++++ b/pyproject.toml
+@@ -107,7 +107,7 @@ ignore_missing_imports = true
+ 
+ [tool.pytest.ini_options]
+ testpaths = "tests"
+-addopts = "--cov=todoman --cov-report=term-missing --color=yes --verbose"
++addopts = "--color=yes --verbose"
+ 
+ [tool.coverage.report]
+ exclude_lines = [
