@@ -1,0 +1,14 @@
+diff --git a/pyproject.toml b/pyproject.toml
+index 5b5d05d..72e098b 100644
+--- a/pyproject.toml
++++ b/pyproject.toml
+@@ -3,9 +3,6 @@ requires = ["setuptools", "wheel"]
+ build-backend = "setuptools.build_meta"
+ 
+ [tool.pytest.ini_options]
+-addopts = [
+-    "--cov=click_repl"
+-]
+ 
+ testpaths = [
+     "tests",
