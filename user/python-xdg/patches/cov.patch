@@ -1,0 +1,13 @@
+diff --git a/pyproject.toml b/pyproject.toml
+index a38488b..55c5c8b 100644
+--- a/pyproject.toml
++++ b/pyproject.toml
+@@ -58,8 +58,6 @@ lint = ["_ruff_fmt_check", "_ruff_check", "_mypy"]
+ test = "pytest tests"
+ check = ["lint", "test"]
+ 
+-[tool.pytest.ini_options]
+-addopts = "--cov=xdg_base_dirs --cov-report=term-missing"
+ 
+ [tool.ruff]
+ target-version = "py310"
