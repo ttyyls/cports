@@ -1,0 +1,11 @@
+pkgname = "himitsu-git"
+pkgver = "0.9.0"
+pkgrel = 0
+build_style = "makefile"
+hostmakedepends = ["hare"]
+makedepends = ["hare"]
+pkgdesc = "Git credential helper using himitsu"
+license = "GPL-3.0-only"
+url = "https://git.sr.ht/~sircmpwn/himitsu-git"
+source = f"{url}/archive/{pkgver}.tar.gz"
+sha256 = "a91331a34904229d29a0c292c17640f380d0ed6272dd7d06e852ac93c9d00ae1"
