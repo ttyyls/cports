@@ -1,0 +1,9 @@
+pkgname = "python-prctl"
+pkgver = ""
+pkgrel = 0
+build_style = "python_pep517"
+hostmakedepends = ["python-build", "python-installer"]
+pkgdesc = ""
+url = ""
+source = f""
+sha256 = ''
