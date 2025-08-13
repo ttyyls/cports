@@ -1,0 +1,11 @@
+pkgname = "himitsu-ssh"
+pkgver = "0.9.1"
+pkgrel = 0
+build_style = "makefile"
+hostmakedepends = ["hare"]
+makedepends = ["hare"]
+pkgdesc = "SSH integration for himitsu"
+license = "GPL-3.0-only"
+url = "https://git.sr.ht/~sircmpwn/himitsu-ssh"
+source = f"{url}/archive/{pkgver}.tar.gz"
+sha256 = "eff69b8841641e620eb9f82241f20c3f9e0665ab46b81dc12f9c45e6eb6c14ea"
