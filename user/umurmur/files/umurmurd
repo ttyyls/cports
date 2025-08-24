@@ -1,0 +1,6 @@
+type = process
+command = /usr/bin/umurmud -d
+run-as = _umurmurd
+logfile = /var/log/umurmurd.log
+depends-on = local.target
+depends-on = network.target
