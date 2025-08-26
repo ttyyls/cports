@@ -1,5 +1,5 @@
 type = process
-command = /usr/bin/reaction start -c /etc/reaction/reaction.jsonnet
+command = /usr/bin/reaction start --config /etc/reaction/
 working-dir = /var/lib/reaction
 logfile = /var/log/reaction.log
 before: network.target

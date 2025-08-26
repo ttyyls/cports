@@ -1,13 +1,26 @@
+diff --git a/config/example.jsonnet b/config/example.jsonnet
+index c9e9abb..807cd87 100644
+--- a/config/example.jsonnet
++++ b/config/example.jsonnet
+@@ -117,7 +117,7 @@ local ip46tables(arguments) = [
+     ssh: {
+       // note that if the command is not in environment's `PATH`
+       // its full path must be given.
+-      cmd: ['journalctl', '-n0', '-fu', 'sshd.service'],
++      cmd: [ 'tail', '-n0', '-F', '/var/log/auth.log' ],
+ 
+       // filters run actions when they match regexes on a stream
+       filters: {
 diff --git a/config/example.yml b/config/example.yml
-index 759f597..85ff697 100644
+index 40f2764..4266a22 100644
 --- a/config/example.yml
 +++ b/config/example.yml
-@@ -56,7 +56,7 @@ streams:
+@@ -91,7 +91,7 @@ streams:
    ssh:
      # note that if the command is not in environment's `PATH`
      # its full path must be given.
 -    cmd: [ 'journalctl', '-n0', '-fu', 'sshd.service' ]
 +    cmd: [ 'tail', '-n0', '-F', '/var/log/auth.log' ]
+ 
      # filters run actions when they match regexes on a stream
      filters:
-       # filters have a user-defined name
