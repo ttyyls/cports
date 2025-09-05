@@ -37,6 +37,8 @@ def get_environment(pkg, jobs=None, cache=False):
         "LIBSSH2_SYS_USE_PKG_CONFIG": "1",
         # sodium-sys
         "SODIUM_USE_PKG_CONFIG": "1",
+        # oqs-sys
+        "LIBOQS_NO_VENDOR": "1",
         # openssl-sys
         "OPENSSL_NO_VENDOR": "1",
         # pcre2-sys
